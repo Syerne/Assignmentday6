@@ -103,3 +103,35 @@ do
 	echo "random num: " $random_num
 done
 
+
+
+
+#flip the coin and count the wins and decide who wins
+Head=0
+Tail=1
+Hcount=0
+Tcount=0
+
+while (( Head != Tail ))
+do
+if(( $((RANDOM % 2)) == 0 ))
+then
+        Hcount=$(($Hcount + 1))
+        echo "HEADS: $Hcount"
+
+        if(($Hcount == 11 ))
+        then
+                echo "***HEAD WINS***"
+                break
+        fi
+else
+        Tcount=$(($Tcount + 1))
+        echo "TAILS: $Tcount"
+
+        if [ $Tcount == 11 ]
+        then
+                echo "***TAIL WINS***"
+                break
+        fi
+fi
+done
