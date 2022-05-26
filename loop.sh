@@ -66,10 +66,25 @@ done
 
 
 #factorial of number
-read -p "enter the positive number: " num
+read -p "enter the positive number for factorial: " num
 factorial=1
 for((i=1 ; i<=$num ; i++))
 do
 	factorial=$(( factorial*i ))
 done
 	echo $factorial
+
+
+
+#prints a table of the powers of 2 to 2^n till 256 is reached..
+read -p "Enter value for power: " p
+num=1
+i=0
+
+while [ $i != $p ]
+do
+        num=$(( $num * 2 ))
+        echo $num
+        i=$(( i + 1))
+done
+
