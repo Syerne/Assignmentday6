@@ -44,3 +44,21 @@ done
 
 
 
+#prime number in range of 2 to 100
+
+for((p=2 ; p<=100 ; p ++))
+do
+        isprime=1
+  for((i=2 ; i<=$p/2 ; i++))
+  do
+        if((p%i == 0))
+        then
+                isprime=0
+                break
+        fi
+  done
+        if((isprime==1))
+        then
+                echo $p
+        fi
+done
