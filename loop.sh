@@ -88,3 +88,18 @@ do
         i=$(( i + 1))
 done
 
+
+
+
+#magic number game
+user_num=1
+random_num=100
+while(( user_num != random_num ))
+do
+	read -p "guess the number witin 1 to 100: " user_num
+	random_num=$(( 1 + RANDOM%100 ))
+
+	echo "user gussed num: " $user_num
+	echo "random num: " $random_num
+done
+
