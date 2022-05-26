@@ -62,3 +62,14 @@ do
                 echo $p
         fi
 done
+
+
+
+#factorial of number
+read -p "enter the positive number: " num
+factorial=1
+for((i=1 ; i<=$num ; i++))
+do
+	factorial=$(( factorial*i ))
+done
+	echo $factorial
