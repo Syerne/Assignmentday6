@@ -23,3 +23,24 @@ done
 
 
 
+#determines the number is a prime.
+read -p "enter the positive number: " num
+isprime=1
+for((i=2 ; i<=$num/2 ; i++))
+do
+        if((num%i == 0))
+        then
+                isprime=0
+                break
+        fi
+done
+        if((isprime==1))
+        then
+                echo "$num is a prime num"
+        else
+                echo "$num is not a prime num"
+        fi
+
+
+
+
